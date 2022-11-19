@@ -88,6 +88,7 @@ public class CheckClasspathForConflicts extends DefaultTask {
 				message.append(String.format("    %s%n", entry));
 				locations.forEach((location) -> message.append(String.format("        %s%n", location)));
 			});
+			System.out.println("Modified");
 			throw new GradleException(message.toString());
 		}
 	}
